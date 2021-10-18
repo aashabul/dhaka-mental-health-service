@@ -9,13 +9,13 @@
         "id": 2,
         "name": "Mental Health Service for Children and Young People",
         "img": "https://photos.smugmug.com/PhotoEssays/Buriganga-River-Cruise/i-Lwf9znv/0/1000x1000/Dhaka-Buriganga-Sadarghat-Bangladesh%20%2812%29-1000x1000.jpg",
-        "description": "We provide specialist mental health services for children and adolescents up to the age of 18 years may be treated by either a child and adolescent mental health service or an adult service, depending on their needs."
+        "description": "We provide specialist mental health services for children and adolescents up to the age of 18 years may be treated by mental health service or an adult service, depending on their needs."
     },
     {
         "id": 3,
         "name": "Mental Health Service for Older people",
         "img": "https://www.desertparkway.com/sites/default/files/iStock-673695060%20%281%29.jpg",
-        "description": "Specialist mental health services are available to treat people over the age of 65 and the elderly."
+        "description": "Specialist mental health services are available to treat people over the age of 65 and the elderly and they also need special attention."
     },
     {
         "id": 4,
@@ -27,7 +27,7 @@
         "id": 5,
         "name": "Private Mental Health Service",
         "img": "https://oceanmhs.wpengine.com/wp-content/uploads/2015/04/bigstock-Close-up-of-psychiatrist-hands-52428127.jpg",
-        "description": "Your doctor can suggest mental health services in your local area or refer you to a psychiatrist, psychologist or other mental health professional in the community usually for up to six sessions to start with."
+        "description": "Your doctor can suggest services in your local area or refer you to a mental health professional in the community."
     },
     {
         "id": 6,

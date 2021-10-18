@@ -1,8 +1,11 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const Service = ({ service }) => {
     const { name, img, description, id } = service;
+    const element = <FontAwesomeIcon icon={faArrowRight} />
     return (
         <div>
             {Array.from({ length: 1 }).map((_, idx) => (
@@ -16,7 +19,7 @@ const Service = ({ service }) => {
                             </Card.Text>
 
                         </Card.Body>
-                        <Button className="btn-secondary">Learn More...</Button>
+                        <Button className="btn-secondary">Learn More {element}</Button>
                     </Card>
                 </Col>
             ))}

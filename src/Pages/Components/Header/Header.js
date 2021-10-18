@@ -1,27 +1,22 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const Header = () => {
     return (
         <div>
-            <Navbar bg="dark" variant="dark">
-                <Container className="d-flex flex-wrap">
-                    <Navbar.Brand href="#home">
-                        <img
-                            alt=""
-                            src="/header-logo.png"
-                            // width="30"
-                            // height="30"
-                            className="d-inline-block align-top fluid w-75"
-                        />{' '}
-                        {/* React Bootstrap */}
-                    </Navbar.Brand>
-                    <Nav className="d-flex flex-wrap">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#services">Services</Nav.Link>
-                        <Nav.Link href="#registration">Registration</Nav.Link>
-                        <Button className="btn-warning" size="sm">Login</Button>
-                    </Nav>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home"><img className="fluid" width="184" height="29" src="/header-logo.png" alt="" /></Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="ms-auto">
+                            <Nav.Link className="px-4" href="#features">Home</Nav.Link>
+                            <Nav.Link className="px-4" href="#pricing">Services</Nav.Link>
+                            <Nav.Link className="px-4" href="#pricing">Registration</Nav.Link>
+                            <Button>LogIn</Button>
+                        </Nav>
+
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div >

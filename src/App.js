@@ -1,17 +1,15 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Services from './Pages/Home/Services/Services';
 import Header from './Pages/Components/Header/Header';
 import Footer from './Pages/Components/Footer/Footer';
-import Banner from './Pages/Home/Banner/Banner';
+import Home from './Pages/Home/Home/Home';
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Banner></Banner>
-      <Services></Services>
+      <Home></Home>
       <Footer></Footer>
     </div>
   );
