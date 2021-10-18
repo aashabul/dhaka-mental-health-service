@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
     return (
@@ -15,7 +15,6 @@ const Header = () => {
                             <Nav.Link className="px-4" href="#pricing">Registration</Nav.Link>
                             <Button>LogIn</Button>
                         </Nav>
-
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
