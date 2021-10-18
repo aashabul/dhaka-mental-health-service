@@ -12,16 +12,15 @@ const Header = () => {
                             src="/header-logo.png"
                             // width="30"
                             // height="30"
-                            className="d-inline-block align-top"
+                            className="d-inline-block align-top fluid w-75"
                         />{' '}
                         {/* React Bootstrap */}
                     </Navbar.Brand>
-                    <Nav className="me-5">
+                    <Nav className="d-flex flex-wrap">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#services">Services</Nav.Link>
-                        <Nav.Link href="#about">About Us</Nav.Link>
                         <Nav.Link href="#registration">Registration</Nav.Link>
-                        <Button className="btn-success px-3" size="sm">Login</Button>
+                        <Button className="btn-warning" size="sm">Login</Button>
                     </Nav>
                 </Container>
             </Navbar>
