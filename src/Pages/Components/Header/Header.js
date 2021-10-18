@@ -25,7 +25,7 @@ const Header = () => {
                     </Nav>
                 </Container>
             </Navbar>
-        </div>
+        </div >
     );
 };
 
