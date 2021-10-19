@@ -1,10 +1,11 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/LogIn/Firebase/firebase.init";
 
 
 initializeAuthentication();
 const useFirebase = () => {
+    const [name, setName] = useState('');
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [email, setEmail] = useState('');
@@ -39,15 +40,25 @@ const useFirebase = () => {
             })
     }
 
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => { })
+    }
+
     const createNewUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
                 setError('');
+                setUserName();
             }).catch(error => {
                 setError(error.message);
             })
+    }
+
+    const handleNameChange = e => {
+        setName(e.target.value);
     }
 
     const handleEmailChange = e => {
@@ -94,7 +105,9 @@ const useFirebase = () => {
         isLoading,
         error,
         isLogin,
+        name,
         handleRegistration,
+        handleNameChange,
         toggleLogin,
         handleEmailChange,
         handlePasswordChange,

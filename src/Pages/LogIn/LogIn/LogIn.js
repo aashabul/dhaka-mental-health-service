@@ -3,11 +3,18 @@ import { Button, Form } from 'react-bootstrap';
 import useAuth from '../../../hooks/UseAuth';
 
 const LogIn = () => {
-    const { signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange, error, toggleLogin, isLogin } = useAuth();
+    const { signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange, error, toggleLogin, isLogin, handleNameChange } = useAuth();
     return (
         <div className="py-5">
             <h2>Please {isLogin ? 'Log In' : 'complete your regirstration with proper information'} </h2>
             <Form className="col-md-4 col-lg-4 col-sm-5 d-flex flex-column m-auto my-5 px-3">
+                {!isLogin &&
+                    <div>
+                        <Form.Label className="d-flex">Name</Form.Label>
+                        <Form.Control onBlur={handleNameChange} type="text" placeholder="Enter your name" required />
+                    </div>
+                }
+
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className="d-flex">Email address</Form.Label>
                     <Form.Control onBlur={handleEmailChange} type="email" placeholder="Enter email" required />
