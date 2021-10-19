@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import useAuth from '../../../hooks/UseAuth';
 
 const LogIn = () => {
+    const { signInUsingGoogle } = useAuth();
     return (
         <div className="py-5">
             <h2>Please complete your regirstration with proper information</h2>
@@ -21,7 +23,7 @@ const LogIn = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check className="d-flex gap-2" type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button onClick={signInUsingGoogle} variant="primary" >
                     Google Sign In
                 </Button>
             </Form>

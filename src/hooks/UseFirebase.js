@@ -5,23 +5,23 @@ import initializeAuthentication from "../Pages/LogIn/Firebase/firebase.init";
 
 initializeAuthentication();
 const useFirebase = () => {
-    const [users, setUsers] = useState({});
+    const [user, setUser] = useState({});
     const auth = getAuth();
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then(res => {
-                setUsers(res.user);
+                setUser(res.user);
             });
     }
 
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
-                setUsers(user);
+                setUser(user);
             }
             else {
-                setUsers({});
+                setUser({});
             }
         });
         return () => unsubscribed;
@@ -32,7 +32,7 @@ const useFirebase = () => {
             .then(() => { });
     }
     return {
-        users,
+        user,
         signInUsingGoogle,
         logOut
     }
