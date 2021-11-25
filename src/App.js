@@ -10,7 +10,6 @@ import LearnMore from './Pages/Components/LearnMore/LearnMore';
 import LogIn from './Pages/LogIn/LogIn/LogIn';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/LogIn/LogIn/PrivateRoute/PrivateRoute';
-import Acheivement from './Pages/Home/Achievement/Acheivement';
 
 function App() {
   return (
